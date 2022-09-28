@@ -1,0 +1,13 @@
+header ul li {
+  float: left;
+  list-style: none;
+}
+.clearFix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
