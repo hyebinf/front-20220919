@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  /* a에 .을 없애줌 */
+  list-style: none;
+}
+a {
+  /* 밑줄 없어짐 */
+  text-decoration: none;
+  color: inherit;
+}
+.clearFix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
