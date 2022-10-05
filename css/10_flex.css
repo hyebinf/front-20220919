@@ -1,0 +1,48 @@
+.anything {
+  display: flex;
+  justify-content: space-between;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+h1 {
+  width: 100px;
+}
+button {
+  width: 100px;
+}
+.container {
+  /* height: 500px; */
+  display: flex;
+  border: 3px solid black;
+  /* flex-direction: row-reverse; */
+  /* justify-content: space-evenly; */
+  /* justify-content: flex-end;  */
+  flex-direction: row;
+  justify-content: flex-start; /*주축에 대한 정렬 방법 지정 */
+  /* align-items: center; 교차숙에 대한 정렬 방법 지정 */
+  width: 700px;
+  /* flex-wrap: wrap; */
+  /* flex-flow: column nowrap; */
+}
+
+.box {
+  background-color: red;
+  flex-basis: 200px; /*주축에 대한 아이템의 최소크기*/
+  /* flex-grow: 1; */
+  /* flex-shrink: 4; */
+  flex-basis: 0;
+  flex-grow: 1;
+  flex: 1; /* 1 1 0 */
+}
+.box:nth-child(1) {
+  flex: 1;
+}
+.box:nth-child(2) {
+  background-color: blue;
+  flex-basis: 100px;
+  /* flex-shrink: 1; */
+  flex: 1;
+}
