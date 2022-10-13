@@ -54,4 +54,49 @@ console.log(false === 0);
 console.log(true + 1);
 
 // 불일치 연산자와 부동등 연산자. => 일치 하지 않으면 true , 일치 false
-console.log(score != 20000);
+console.log(score != 40000);
+/*
+    논리 연산자 : 좌항과 우항의 논리값을 조합해서 새로운 논리값을 반환.
+    ||(or) : A or B => A와 B 중에 하나라도 true이면 true, 둘다 false이면 false
+    &&(and) : A and B => A와 B 둘다 true일 때만, 둘중 하나라도 false라면, false를 반환
+    !(not) : 부정 -> true라면 false로, false라면 true를 반환
+*/
+var isTrue = true;
+console.log(true || false); //true or false => true
+console.log(false || false); // false or false => false
+console.log(false && false); //false
+console.log(!false); //false의 반전값 => true
+console.log(!(false && false)); //false and false 의 반전값 =>true;
+console.log(2 > 1 && 1 < 10);
+
+/*
+    연결 연산자(문자열) : 좌항과 우항의 문자열을 연결 하여 반환
+         => 템플릿 리터럴 사용하는 것이 가독성이 좋다.
+*/
+
+var str = "안녕하세요" + " 임혜 빈 입니다.";
+console.log(str);
+
+var name = "황보석";
+var age = "30";
+var address = "인천";
+var greeting =
+  "안녕하세요 저는 " + address + "에 사는 " + age + "세" + name + "입니다.";
+// 안녕하세요 저는 인천에 사는 30세 황보석 입니다
+
+console.log(greeting);
+
+// 템플릿 리터럴 : ``(백틱)안의 문자열에 ${}를 이용해 변수에 있는 값을 문자열에 포함시킨다.
+var greeting02 = `안녕하세요 저는 ${adress}에 사는 ${age}세 ${name} 입니다.`;
+console.log(greeting02);
+
+// 현재 연도와 내 생년도 year,birthYear 변수에 담아서 나이를 구하기
+var year = 2022;
+var birthYear = 1993;
+var age = year - birthYear + 1;
+console.log("2022" + "1993");
+
+// 템플릿 리터럴로 소개하는 문장 consol 창에 출력해보기
+var greeting03 = `안녕하세요 저는 ${age}세 ${name}입니다.`;
+
+console.log(greeting03);
